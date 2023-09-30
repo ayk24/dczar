@@ -1,0 +1,17 @@
+# please set the file path
+output_dir: None
+train_data_file: None
+dev_data_file: None
+test_data_file: None
+
+# device
+fp16: False
+fp16_opt_level: "O1"
+no_cuda: False
+
+# hyper-parameters
+per_gpu_eval_batch_size: 16
+
+# model specific parameters
+model_type: 'as-pzero'
+mode_type: 'eval'

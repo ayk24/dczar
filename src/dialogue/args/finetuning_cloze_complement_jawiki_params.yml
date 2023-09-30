@@ -1,0 +1,16 @@
+# please set the file path
+output_dir: None
+data_dir: None
+model_name_or_path: None # pretrained model
+
+tokenizer_name: "cl-tohoku/bert-base-japanese-whole-word-masking"
+
+# hyper-parameters
+per_gpu_train_batch_size: 32
+per_gpu_eval_batch_size: 64
+encoder_max_length: 512
+decoder_max_length: 128
+no_repeat_ngram_size: 3
+length_penalty: 2.0
+early_stopping: True
+num_epochs: 30

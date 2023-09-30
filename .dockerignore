@@ -1,0 +1,8 @@
+.venv/
+.vscode/
+apex/
+data/
+docker/
+outputs/
+samples/
+src/

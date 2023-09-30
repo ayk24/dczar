@@ -1,0 +1,13 @@
+# please set the file path
+data_dir: None
+model_name_or_path: None # fine-tuned model
+
+tokenizer_name: "cl-tohoku/bert-base-japanese-whole-word-masking"
+
+# hyper-parameters
+batch_size: 64
+encoder_max_length: 512
+decoder_max_length: 128
+top_p: 0.90
+length_penalty: 2.0
+no_repeat_ngram_size: 3

@@ -1,0 +1,15 @@
+version: '2'
+services:
+  dczar:
+    build:
+      context: "../"
+      dockerfile: "docker/Dockerfile"
+    container_name: 'dczar'
+    platform: linux/amd64
+    restart: always
+    tty: true
+    volumes:
+      - type: bind
+        source: "../"
+        target: "/code"
+    working_dir: '/code'

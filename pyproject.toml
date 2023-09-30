@@ -1,0 +1,55 @@
+[tool.poetry]
+name = "dczar"
+version = "0.1.0"
+description = ""
+authors = ["Ayaka Ueyama <aykueym@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.13"
+PyYAML = "^6.0"
+numpy = "1.26.0"
+torch = {version = "^2.0.1+cu118", source = "torch_cu118"}
+transformers = "4.33.0"
+evaluate = "^0.1.2"
+datasets = "^2.3.2"
+bert-score = "^0.3.11"
+rouge-score = "^0.0.4"
+torchtext = "0.6.0"
+pytorch-warmup = "^0.0.4"
+ipadic = "^1.0.0"
+fugashi = "^1.1.1"
+mojimoji = "^0.0.12"
+termcolor = "^1.1.0"
+logzero = "1.5.0"
+tensorboardX = "^2.5.1"
+gradio = "^3.1.4"
+wikiextractor = "^3.0.6"
+emoji = "^1.7.0"
+jmlm = {path = "src/dialogue/jmlm_scoring"}
+
+[[tool.poetry.source]]
+name = "torch_cu118"
+url = "https://download.pytorch.org/whl/cu118"
+priority = "explicit"
+
+[tool.poetry.group.dev.dependencies]
+isort = "^5.12.0"
+black = "^23.9.1"
+mypy = "^1.5.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.mypy]
+show_error_context = true
+disallow_untyped_defs = true
+ignore_missing_imports = true
+
+[tool.black]
+target-version = ['py39']
+line-length = 128
+
+[tool.isort]
+line_length = 128
